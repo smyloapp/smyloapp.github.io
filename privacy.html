@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Privacy Policy — Smylo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy2: #112240;
+      --navy3: #1a3a5c;
+      --teal: #2eb88a;
+      --teal-light: #4dd4a8;
+      --teal-pale: #e8f8f3;
+      --blue3: #4a90d9;
+      --text: #0a1628;
+      --text2: #4a6080;
+      --text3: #8aa4be;
+      --border: rgba(10,22,40,0.08);
+      --border-teal: rgba(46,184,138,0.2);
+      --glass: rgba(255,255,255,0.7);
+      --glass2: rgba(255,255,255,0.9);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Plus Jakarta Sans',sans-serif;
+      background:#f4f7fb;
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:var(--glass2);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+      padding:0 24px;
+      height:64px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{
+      font-family:'Syne',sans-serif;font-size:22px;font-weight:800;
+      color:var(--navy);text-decoration:none;letter-spacing:-0.5px;
+      display:flex;align-items:center;gap:8px;
+    }
+    .nav-logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%}
+    .nav-back{
+      font-size:14px;font-weight:600;color:var(--text2);
+      text-decoration:none;
+      display:flex;align-items:center;gap:6px;
+      transition:color .2s;
+    }
+    .nav-back:hover{color:var(--teal)}
+
+    /* HERO BAND */
+    .policy-hero{
+      background:linear-gradient(135deg, var(--navy) 0%, var(--navy3) 100%);
+      padding:64px 24px 48px;
+      text-align:center;
+    }
+    .policy-hero h1{
+      font-family:'Syne',sans-serif;
+      font-size:clamp(32px,6vw,52px);
+      font-weight:800;color:white;
+      line-height:1.1;margin-bottom:12px;
+    }
+    .policy-hero p{
+      font-size:16px;color:rgba(255,255,255,0.6);
+      max-width:480px;margin:0 auto;
+    }
+    .policy-hero .updated{
+      display:inline-block;margin-top:20px;
+      background:rgba(46,184,138,0.15);
+      border:1px solid rgba(46,184,138,0.3);
+      color:var(--teal-light);
+      font-size:12px;font-weight:700;letter-spacing:0.5px;
+      padding:6px 14px;border-radius:20px;
+    }
+
+    /* LAYOUT */
+    .policy-wrap{
+      max-width:760px;margin:0 auto;
+      padding:48px 24px 80px;
+    }
+
+    /* TOC */
+    .toc{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:24px 28px;
+      margin-bottom:40px;
+      box-shadow:0 2px 12px rgba(10,22,40,0.05);
+    }
+    .toc h2{
+      font-family:'Syne',sans-serif;
+      font-size:14px;font-weight:700;
+      color:var(--text3);letter-spacing:1px;text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .toc ol{
+      padding-left:20px;
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .toc ol li a{
+      font-size:14px;font-weight:500;
+      color:var(--text2);text-decoration:none;
+      transition:color .2s;
+    }
+    .toc ol li a:hover{color:var(--teal)}
+
+    /* SECTIONS */
+    .policy-section{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:32px 36px;
+      margin-bottom:20px;
+      box-shadow:0 2px 12px rgba(10,22,40,0.04);
+    }
+    .policy-section h2{
+      font-family:'Syne',sans-serif;
+      font-size:20px;font-weight:700;
+      color:var(--navy);
+      margin-bottom:16px;
+      padding-bottom:12px;
+      border-bottom:2px solid var(--teal-pale);
+      display:flex;align-items:center;gap:10px;
+    }
+    .policy-section h2 .sec-num{
+      font-size:12px;font-weight:700;
+      background:var(--teal-pale);color:var(--teal);
+      padding:3px 8px;border-radius:6px;letter-spacing:0.5px;
+    }
+    .policy-section h3{
+      font-size:15px;font-weight:700;
+      color:var(--navy2);
+      margin:20px 0 8px;
+    }
+    .policy-section p{
+      font-size:15px;color:var(--text2);
+      margin-bottom:12px;line-height:1.75;
+    }
+    .policy-section ul, .policy-section ol{
+      padding-left:20px;
+      margin-bottom:12px;
+    }
+    .policy-section li{
+      font-size:15px;color:var(--text2);
+      margin-bottom:6px;line-height:1.7;
+    }
+    .policy-section a{
+      color:var(--teal);text-decoration:underline;
+    }
+
+    /* HIGHLIGHT BOX */
+    .highlight{
+      background:var(--teal-pale);
+      border:1px solid var(--border-teal);
+      border-radius:10px;
+      padding:16px 20px;
+      margin:16px 0;
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    .highlight .hl-icon{font-size:18px;line-height:1.4}
+    .highlight p{margin:0;font-size:14px;color:var(--navy2);font-weight:500}
+
+    /* CONTACT CARD */
+    .contact-card{
+      background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);
+      border-radius:16px;
+      padding:32px 36px;
+      margin-top:32px;
+      text-align:center;
+    }
+    .contact-card h2{
+      font-family:'Syne',sans-serif;
+      font-size:22px;font-weight:800;color:white;
+      margin-bottom:8px;
+    }
+    .contact-card p{
+      font-size:14px;color:rgba(255,255,255,0.6);
+      margin-bottom:20px;
+    }
+    .contact-card a{
+      display:inline-block;
+      background:var(--teal);color:white;
+      font-weight:700;font-size:14px;
+      padding:12px 28px;border-radius:50px;
+      text-decoration:none;
+      transition:all .2s;
+    }
+    .contact-card a:hover{background:var(--teal-light);transform:translateY(-1px)}
+
+    /* FOOTER */
+    footer{
+      background:var(--navy);
+      text-align:center;
+      padding:32px 24px;
+    }
+    .footer-logo{
+      font-family:'Syne',sans-serif;font-size:24px;font-weight:800;
+      color:var(--teal-light);margin-bottom:10px;letter-spacing:-0.5px;
+    }
+    footer p{font-size:13px;color:rgba(255,255,255,0.3)}
+    .footer-links{
+      display:flex;justify-content:center;gap:24px;margin-top:12px;
+    }
+    .footer-links a{
+      font-size:13px;color:rgba(255,255,255,0.3);
+      text-decoration:none;transition:color .3s;
+    }
+    .footer-links a:hover{color:var(--teal-light)}
+
+    @media(max-width:600px){
+      .policy-section{padding:24px 20px}
+      .policy-hero{padding:48px 20px 36px}
+      .toc{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><div class="nav-logo-dot"></div>Smylo</a>
+  <a class="nav-back" href="/">← Back to Smylo</a>
+</nav>
+
+<!-- HERO -->
+<div class="policy-hero">
+  <h1>Privacy Policy</h1>
+  <p>How Smylo collects, uses, and protects your personal data.</p>
+  <span class="updated">Last updated: April 2026</span>
+</div>
+
+<div class="policy-wrap">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Who we are</a></li>
+      <li><a href="#s2">What data we collect</a></li>
+      <li><a href="#s3">How we use your data</a></li>
+      <li><a href="#s4">On-device processing & AI</a></li>
+      <li><a href="#s5">Data sharing & third parties</a></li>
+      <li><a href="#s6">Data storage & retention</a></li>
+      <li><a href="#s7">Your rights under GDPR</a></li>
+      <li><a href="#s8">Children's privacy</a></li>
+      <li><a href="#s9">Changes to this policy</a></li>
+      <li><a href="#s10">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. WHO WE ARE -->
+  <div class="policy-section" id="s1">
+    <h2><span class="sec-num">01</span> Who we are</h2>
+    <p>Smylo is a personal oral health app developed and operated by:</p>
+    <p>
+      <strong>Théo Louis Pottier</strong><br/>
+      Independent developer, Denmark<br/>
+      Contact: <a href="mailto:smyloapp@gmail.com">smyloapp@gmail.com</a>
+    </p>
+    <p>For the purposes of the EU General Data Protection Regulation (GDPR), Théo Louis Pottier is the data controller for personal data collected through the Smylo app and website.</p>
+  </div>
+
+  <!-- 2. WHAT DATA WE COLLECT -->
+  <div class="policy-section" id="s2">
+    <h2><span class="sec-num">02</span> What data we collect</h2>
+
+    <h3>Information you provide</h3>
+    <ul>
+      <li>Your first name (used to personalise your plan)</li>
+      <li>Your age (used for age-appropriate product recommendations)</li>
+      <li>Your region (used for regional product filtering)</li>
+      <li>Oral health questionnaire answers (e.g. brushing habits, sensitivity, whitening goals)</li>
+      <li>Allergy and medical condition disclosures (only what you choose to enter)</li>
+    </ul>
+
+    <h3>Optional photo data</h3>
+    <ul>
+      <li>If you choose to use the Photo Analysis feature, your photo is processed entirely on your device. The image is never uploaded, stored on a server, or transmitted to any external service.</li>
+    </ul>
+
+    <h3>Data we do NOT collect</h3>
+    <ul>
+      <li>We do not collect your email address, phone number, or any account credentials</li>
+      <li>We do not collect location data</li>
+      <li>We do not use advertising trackers or analytics SDKs</li>
+      <li>We do not collect payment information</li>
+    </ul>
+  </div>
+
+  <!-- 3. HOW WE USE YOUR DATA -->
+  <div class="policy-section" id="s3">
+    <h2><span class="sec-num">03</span> How we use your data</h2>
+    <p>We use the information you provide solely to:</p>
+    <ul>
+      <li>Generate personalised oral care product recommendations</li>
+      <li>Create a daily care routine tailored to your health profile</li>
+      <li>Display your scan history and progress within the app</li>
+      <li>Apply age and region-based safety filters to recommendations</li>
+    </ul>
+    <p>The legal basis for processing under GDPR is <strong>Article 6(1)(b)</strong> — processing necessary to perform the service you have requested — and <strong>Article 6(1)(a)</strong> — your explicit consent given when you first launch the app.</p>
+    <p>We do not use your data for marketing, profiling, advertising, or any purpose beyond delivering the Smylo service to you.</p>
+  </div>
+
+  <!-- 4. ON-DEVICE AI -->
+  <div class="policy-section" id="s4">
+    <h2><span class="sec-num">04</span> On-device processing & AI</h2>
+
+    <div class="highlight">
+      <span class="hl-icon">🔒</span>
+      <p>All photo analysis in Smylo is performed entirely on your device using Apple's CoreML framework. Your photos are never sent to any server or third-party AI service.</p>
+    </div>
+
+    <p>When you use the optional Photo Analysis feature:</p>
+    <ul>
+      <li>Your photo is passed to a machine learning model stored locally within the app</li>
+      <li>The model runs on your iPhone or iPad using Apple's on-device CoreML technology</li>
+      <li>The photo and all analysis results remain exclusively on your device</li>
+      <li>No image data, pixel data, or scan results are transmitted externally</li>
+    </ul>
+
+    <p>The recommendation engine that generates your product plan also runs entirely locally — no questionnaire answers or personal data are sent to any AI service, cloud API, or external server.</p>
+
+    <h3>What "on-device" means for you</h3>
+    <p>Your data never leaves your phone. Smylo has no backend server that stores your health data. If you delete the app, all your data is permanently gone.</p>
+  </div>
+
+  <!-- 5. DATA SHARING -->
+  <div class="policy-section" id="s5">
+    <h2><span class="sec-num">05</span> Data sharing & third parties</h2>
+
+    <div class="highlight">
+      <span class="hl-icon">🚫</span>
+      <p>Smylo does not sell, rent, or share your personal data with any third party.</p>
+    </div>
+
+    <p>We use the following third-party services in the app or on this website, none of which receive your health or personal data:</p>
+
+    <h3>Apple App Store & iOS platform</h3>
+    <p>Smylo is distributed via the Apple App Store. Apple may collect anonymous usage statistics under their own privacy policy. We have no access to individually identifiable data from Apple.</p>
+
+    <h3>Amazon Associates</h3>
+    <p>Product recommendation links in the app and on this website use Amazon affiliate links (smylo-20). If you click a link and visit Amazon, Amazon's own privacy policy applies. We do not share any personal data with Amazon, and clicking a link is entirely optional.</p>
+
+    <h3>Google Fonts</h3>
+    <p>This website uses Google Fonts to load typefaces. Google may log the request. No personal data from Smylo users is shared.</p>
+
+    <p>No advertising networks, analytics platforms, data brokers, or other third parties receive any data about you.</p>
+  </div>
+
+  <!-- 6. STORAGE & RETENTION -->
+  <div class="policy-section" id="s6">
+    <h2><span class="sec-num">06</span> Data storage & retention</h2>
+    <p>All data you enter into Smylo is stored locally on your device using iOS's standard local storage (SharedPreferences / UserDefaults). This includes:</p>
+    <ul>
+      <li>Your questionnaire answers and health profile</li>
+      <li>Scan results and history</li>
+      <li>Saved recommendations and care plans</li>
+    </ul>
+    <p>This data is retained on your device until you:</p>
+    <ul>
+      <li>Delete individual records from within the app</li>
+      <li>Uninstall the Smylo app (all data is permanently deleted)</li>
+      <li>Reset your device</li>
+    </ul>
+    <p>We have no copy of your data and cannot retrieve it if you lose your device or uninstall the app.</p>
+  </div>
+
+  <!-- 7. GDPR RIGHTS -->
+  <div class="policy-section" id="s7">
+    <h2><span class="sec-num">07</span> Your rights under GDPR</h2>
+    <p>As a resident of the European Union (or European Economic Area), you have the following rights under the GDPR:</p>
+    <ul>
+      <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — you can correct inaccurate data directly in the app</li>
+      <li><strong>Right to erasure</strong> — you can delete your data at any time from within the app, or by uninstalling it</li>
+      <li><strong>Right to restriction</strong> — you can ask us to stop processing your data</li>
+      <li><strong>Right to data portability</strong> — you can request your data in a portable format</li>
+      <li><strong>Right to object</strong> — you can object to processing based on our legitimate interests</li>
+      <li><strong>Right to withdraw consent</strong> — you can withdraw consent at any time without affecting prior processing</li>
+    </ul>
+    <p>Because all data is stored locally on your device, you can exercise most of these rights directly in the app without contacting us. For any requests you cannot fulfil yourself, contact us at <a href="mailto:smyloapp@gmail.com">smyloapp@gmail.com</a> and we will respond within 30 days.</p>
+    <p>You also have the right to lodge a complaint with your local data protection authority. In Denmark, this is the <a href="https://www.datatilsynet.dk" target="_blank" rel="noopener">Datatilsynet</a>.</p>
+  </div>
+
+  <!-- 8. CHILDREN -->
+  <div class="policy-section" id="s8">
+    <h2><span class="sec-num">08</span> Children's privacy</h2>
+    <p>Smylo is designed for use by individuals of all ages, including children, under parental supervision. The app includes age-based safety filters that apply different product recommendations for users under 18 and under 6.</p>
+    <p>We do not knowingly collect personal data from children without parental consent. The app does not require account creation, and no data is transmitted externally. Parents can delete all data by uninstalling the app.</p>
+    <p>If you believe a child has provided data without appropriate consent, contact us at <a href="mailto:smyloapp@gmail.com">smyloapp@gmail.com</a>.</p>
+  </div>
+
+  <!-- 9. CHANGES -->
+  <div class="policy-section" id="s9">
+    <h2><span class="sec-num">09</span> Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will provide notice within the app.</p>
+    <p>Continued use of Smylo after changes are posted constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card" id="s10">
+    <h2>Questions? Get in touch.</h2>
+    <p>We're happy to answer any questions about your data or this policy.</p>
+    <a href="mailto:smyloapp@gmail.com">smyloapp@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Smylo</div>
+  <p>© 2026 Théo Louis Pottier. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/">Home</a>
+    <a href="mailto:smyloapp@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
