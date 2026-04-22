@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Terms of Use — Smylo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy2: #112240;
+      --navy3: #1a3a5c;
+      --teal: #2eb88a;
+      --teal-light: #4dd4a8;
+      --teal-pale: #e8f8f3;
+      --blue3: #4a90d9;
+      --text: #0a1628;
+      --text2: #4a6080;
+      --text3: #8aa4be;
+      --border: rgba(10,22,40,0.08);
+      --border-teal: rgba(46,184,138,0.2);
+      --glass: rgba(255,255,255,0.7);
+      --glass2: rgba(255,255,255,0.9);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:#f4f7fb;color:var(--text);line-height:1.7;}
+
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:var(--glass2);backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+      padding:0 24px;height:64px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--navy);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px;}
+    .nav-logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%}
+    .nav-back{font-size:14px;font-weight:600;color:var(--text2);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
+    .nav-back:hover{color:var(--teal)}
+
+    .policy-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);padding:64px 24px 48px;text-align:center;}
+    .policy-hero h1{font-family:'Syne',sans-serif;font-size:clamp(32px,6vw,52px);font-weight:800;color:white;line-height:1.1;margin-bottom:12px;}
+    .policy-hero p{font-size:16px;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto;}
+    .policy-hero .updated{display:inline-block;margin-top:20px;background:rgba(46,184,138,0.15);border:1px solid rgba(46,184,138,0.3);color:var(--teal-light);font-size:12px;font-weight:700;letter-spacing:0.5px;padding:6px 14px;border-radius:20px;}
+
+    .policy-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:24px 28px;margin-bottom:40px;box-shadow:0 2px 12px rgba(10,22,40,0.05);}
+    .toc h2{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+    .toc ol{padding-left:20px;display:flex;flex-direction:column;gap:6px;}
+    .toc ol li a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color .2s;}
+    .toc ol li a:hover{color:var(--teal)}
+
+    .policy-section{background:white;border:1px solid var(--border);border-radius:16px;padding:32px 36px;margin-bottom:20px;box-shadow:0 2px 12px rgba(10,22,40,0.04);}
+    .policy-section h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--teal-pale);display:flex;align-items:center;gap:10px;}
+    .policy-section h2 .sec-num{font-size:12px;font-weight:700;background:var(--teal-pale);color:var(--teal);padding:3px 8px;border-radius:6px;letter-spacing:0.5px;}
+    .policy-section h3{font-size:15px;font-weight:700;color:var(--navy2);margin:20px 0 8px;}
+    .policy-section p{font-size:15px;color:var(--text2);margin-bottom:12px;line-height:1.75;}
+    .policy-section ul,.policy-section ol{padding-left:20px;margin-bottom:12px;}
+    .policy-section li{font-size:15px;color:var(--text2);margin-bottom:6px;line-height:1.7;}
+    .policy-section a{color:var(--teal);text-decoration:underline;}
+
+    .highlight{background:var(--teal-pale);border:1px solid var(--border-teal);border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;gap:12px;align-items:flex-start;}
+    .highlight .hl-icon{font-size:18px;line-height:1.4}
+    .highlight p{margin:0;font-size:14px;color:var(--navy2);font-weight:500}
+
+    .warning{background:#fff8f0;border:1px solid rgba(255,160,50,0.3);border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;gap:12px;align-items:flex-start;}
+    .warning .hl-icon{font-size:18px;line-height:1.4}
+    .warning p{margin:0;font-size:14px;color:#7a4a10;font-weight:500}
+
+    .contact-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);border-radius:16px;padding:32px 36px;margin-top:32px;text-align:center;}
+    .contact-card h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:white;margin-bottom:8px;}
+    .contact-card p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:20px;}
+    .contact-card a{display:inline-block;background:var(--teal);color:white;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;text-decoration:none;transition:all .2s;}
+    .contact-card a:hover{background:var(--teal-light);transform:translateY(-1px)}
+
+    footer{background:var(--navy);text-align:center;padding:32px 24px;}
+    .footer-logo{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--teal-light);margin-bottom:10px;letter-spacing:-0.5px;}
+    footer p{font-size:13px;color:rgba(255,255,255,0.3)}
+    .footer-links{display:flex;justify-content:center;gap:24px;margin-top:12px;}
+    .footer-links a{font-size:13px;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .3s;}
+    .footer-links a:hover{color:var(--teal-light)}
+
+    @media(max-width:600px){
+      .policy-section{padding:24px 20px}
+      .policy-hero{padding:48px 20px 36px}
+      .toc{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><div class="nav-logo-dot"></div>Smylo</a>
+  <a class="nav-back" href="/">← Back to Smylo</a>
+</nav>
+
+<div class="policy-hero">
+  <h1>Terms of Use</h1>
+  <p>Please read these terms before using Smylo.</p>
+  <span class="updated">Last updated: April 2026</span>
+</div>
+
+<div class="policy-wrap">
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#t1">Acceptance of terms</a></li>
+      <li><a href="#t2">What Smylo is</a></li>
+      <li><a href="#t3">Not medical advice</a></li>
+      <li><a href="#t4">Affiliate links & product recommendations</a></li>
+      <li><a href="#t5">Acceptable use</a></li>
+      <li><a href="#t6">Intellectual property</a></li>
+      <li><a href="#t7">Disclaimers & limitation of liability</a></li>
+      <li><a href="#t8">Changes to the service</a></li>
+      <li><a href="#t9">Governing law</a></li>
+      <li><a href="#t10">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="policy-section" id="t1">
+    <h2><span class="sec-num">01</span> Acceptance of terms</h2>
+    <p>By downloading or using the Smylo app, or by visiting smylo.site, you agree to be bound by these Terms of Use. If you do not agree, please do not use Smylo.</p>
+    <p>These terms are provided by <strong>Théo Louis Pottier</strong>, the sole developer and operator of Smylo, based in Denmark.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="policy-section" id="t2">
+    <h2><span class="sec-num">02</span> What Smylo is</h2>
+    <p>Smylo is a personal oral health companion app that provides:</p>
+    <ul>
+      <li>Personalised at-home oral care product recommendations based on your questionnaire answers</li>
+      <li>An optional on-device photo analysis feature using Apple's CoreML technology</li>
+      <li>General oral hygiene guidance and care routines</li>
+    </ul>
+    <p>Smylo is intended for personal, non-commercial use only.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="policy-section" id="t3">
+    <h2><span class="sec-num">03</span> Not medical advice</h2>
+    <div class="warning">
+      <span class="hl-icon">⚠️</span>
+      <p>Smylo is not a medical device and does not provide medical diagnoses, clinical assessments, or professional dental advice.</p>
+    </div>
+    <p>The recommendations, scan results, and guidance provided by Smylo are for general informational and educational purposes only. They are based on publicly available oral health guidelines from recognised organisations such as the American Dental Association and the NHS.</p>
+    <p>You should always consult a qualified dentist or healthcare professional for any dental concerns, symptoms, or before making significant changes to your oral care routine. Smylo is not a substitute for professional dental care.</p>
+    <p>Théo Louis Pottier accepts no liability for any health outcomes arising from reliance on Smylo's recommendations.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="policy-section" id="t4">
+    <h2><span class="sec-num">04</span> Affiliate links & product recommendations</h2>
+    <div class="highlight">
+      <span class="hl-icon">💡</span>
+      <p>Smylo participates in the Amazon Associates affiliate programme. Some product links may earn a small commission at no extra cost to you.</p>
+    </div>
+    <h3>How affiliate links work</h3>
+    <p>Product recommendation links in the Smylo app and on smylo.site may be Amazon affiliate links. This means that if you click a link and make a purchase on Amazon, Smylo may earn a small commission (typically 3–5% of the sale price) at absolutely no additional cost to you.</p>
+    <h3>Our recommendations are independent</h3>
+    <p>Products are recommended based solely on their suitability for your oral health profile — factors such as sensitivity, age, allergies, and whitening goals. Affiliate relationships do not influence which products are recommended to you. We never recommend a product because of its commission rate.</p>
+    <h3>Amazon's role</h3>
+    <p>Smylo is a participant in the Amazon Associates Programme, an affiliate advertising programme designed to provide a means to earn fees by linking to Amazon. Smylo's Store ID is <strong>smylo-20</strong>. Amazon is an independent third party and their own <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener">Privacy Policy</a> apply to any purchases you make.</p>
+    <p>Clicking affiliate links and making purchases is entirely optional. You are free to search for any recommended product independently.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="policy-section" id="t5">
+    <h2><span class="sec-num">05</span> Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use Smylo for any unlawful purpose</li>
+      <li>Attempt to reverse-engineer, decompile, or extract the app's ML models or source code</li>
+      <li>Use Smylo to provide dental advice to third parties on a professional or commercial basis</li>
+      <li>Misrepresent Smylo's recommendations as professional dental diagnoses</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="policy-section" id="t6">
+    <h2><span class="sec-num">06</span> Intellectual property</h2>
+    <p>All content in the Smylo app and on smylo.site — including the name "Smylo", design, code, text, and graphics — is the property of Théo Louis Pottier and is protected by applicable intellectual property laws.</p>
+    <p>You may not reproduce, distribute, or create derivative works from any Smylo content without prior written permission.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="policy-section" id="t7">
+    <h2><span class="sec-num">07</span> Disclaimers & limitation of liability</h2>
+    <p>Smylo is provided "as is" without warranties of any kind, express or implied. We do not guarantee that the app will be error-free, uninterrupted, or that recommendations will be suitable for every individual.</p>
+    <p>To the fullest extent permitted by law, Théo Louis Pottier shall not be liable for any indirect, incidental, or consequential damages arising from your use of Smylo, including but not limited to adverse reactions to recommended products or reliance on scan results.</p>
+    <p>Nothing in these terms limits liability for death, personal injury, or fraudulent misrepresentation caused by our negligence, as required by Danish and EU consumer law.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="policy-section" id="t8">
+    <h2><span class="sec-num">08</span> Changes to the service</h2>
+    <p>We reserve the right to modify, suspend, or discontinue Smylo at any time without notice. We may also update these Terms of Use. Continued use of Smylo after changes are posted constitutes acceptance of the revised terms.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="policy-section" id="t9">
+    <h2><span class="sec-num">09</span> Governing law</h2>
+    <p>These terms are governed by the laws of Denmark. Any disputes arising from these terms or your use of Smylo shall be subject to the jurisdiction of the Danish courts, without prejudice to your rights as a consumer under applicable EU law.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card" id="t10">
+    <h2>Questions about these terms?</h2>
+    <p>We're happy to clarify anything.</p>
+    <a href="mailto:smyloapp@gmail.com">smyloapp@gmail.com</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Smylo</div>
+  <p>© 2026 Théo Louis Pottier. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Use</a>
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
